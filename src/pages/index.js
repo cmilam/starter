@@ -29,7 +29,7 @@ const listStyles = {
   paddingLeft: 0,
 }
 const listItemStyles = {
-  fontWeight: "300",
+  fontWeight: "400",
   fontSize: "24px",
   maxWidth: "560px",
 }
@@ -60,7 +60,7 @@ const docLink = {
 // data
 const links = [
   {
-    text: "Tutorial",
+    text: "Getting Started",
     url: "https://www.gatsbyjs.com/docs/tutorial/",
     description:
       "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
