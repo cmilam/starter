@@ -1,6 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: "headphones",
+  },    
+  author: {
+    name: `Craig Milam`,
+    summary: `#100daysofgatsby`,
+  },
+  description: `#100daysofgatsby challenge site - audiocore`,
+  siteUrl: `https://preview-startermain.gtsb.io`,
+  social: {
+    twitter: `texasrocker`,
   },
   plugins: [
     {
