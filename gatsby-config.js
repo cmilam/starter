@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     title: "headphones",
   },
-  
+
   plugins: [
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "JcqBSD1b8g-o-Rvaovp3hKkuJr82PZX1N6DQYNpwbmM",
-        spaceId: "evegefjcr57r",
+        accessToken: "BMQsbl63FDjXsDBv0C0h8cdcwlMpUjS-ep44Lhmj96U",
+        spaceId: "6ttsjfhno0pv",
       },
     },
     "gatsby-plugin-sharp",
