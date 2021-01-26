@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "headphones",
+    siteURL: "www.example.com",
   },
 
   plugins: [
