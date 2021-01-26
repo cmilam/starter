@@ -11,11 +11,13 @@ module.exports = {
         spaceId: "6ttsjfhno0pv",
         accessToken: "BMQsbl63FDjXsDBv0C0h8cdcwlMpUjS-ep44Lhmj96U",
       },
+      
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-chakra",
     {
       resolve: "gatsby-source-filesystem",
       options: {
