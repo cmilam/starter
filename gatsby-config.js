@@ -5,17 +5,15 @@ module.exports = {
   },
 
   plugins: [
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-transformer-sharp",
-    "@chakra-ui/gatsby-plugin",
-    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-source-filesystem`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
+    `@chakra-ui/gatsby-plugin`,
+    `gatsby-plugin-image`,
+    "gatsby-source-filesystem",
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-source-contentful`,
       options: {
         spaceId: "6ttsjfhno0pv",
         accessToken: "BMQsbl63FDjXsDBv0C0h8cdcwlMpUjS-ep44Lhmj96U",
