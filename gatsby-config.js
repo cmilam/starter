@@ -11,7 +11,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `@chakra-ui/gatsby-plugin`,
     `gatsby-plugin-image`,
-    `gatsby-source-filesystem`,
+    `gatsby-background-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -19,6 +19,14 @@ module.exports = {
         accessToken: "BMQsbl63FDjXsDBv0C0h8cdcwlMpUjS-ep44Lhmj96U",
       },
 
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: path.join(__dirname, `src`, `images`),
+      },
+      __key: "images",
     },
     {
       resolve: `gatsby-source-formium`,
