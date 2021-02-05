@@ -1,6 +1,4 @@
-// src/pages/index.js
-import React from "react"
-import { Box, Text, Button, Heading } from "@chakra-ui/react"
+import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
@@ -21,9 +19,8 @@ const BackgroundSection = ({ className }) => {
     `
   )
 
-// Set ImageData.
-const imageData = data.desktop.childImageSharp.fluid
-
+  // Set ImageData.
+  const imageData = data.desktop.childImageSharp.fluid
 
   return (
     <BackgroundImage
@@ -32,20 +29,11 @@ const imageData = data.desktop.childImageSharp.fluid
       fluid={imageData}
       backgroundColor={`#040e18`}
     >
-      <Box maxW="64rem">
-        <Heading mb={4}>Modern online and offline payments for Africa</Heading>
-      <Text>
-          Paystack helps businesses in Africa get paid by anyone, anywhere in the
-          world
-        </Text>
-      <Button size="lg" colorScheme="whiteAlpha" mt="24px">
-          Create a free account
-      </Button>
-      </Box>
-        <Text fontSize="xl">Audiocore Homepage</Text>
-      </BackgroundImage>
+      <h2>gatsby-background-image</h2>
+    </BackgroundImage>
   )
 }
+
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
   background-position: bottom center;
@@ -53,6 +41,4 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   background-size: cover;
 `
 
-
-
-export default {StyledBackgroundSection}
+export default StyledBackgroundSection
