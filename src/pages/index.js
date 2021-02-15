@@ -25,7 +25,7 @@ const Home = ({ data }) => {
 export default Home
 
 export const query = graphql `
-{
+query MyQuery {
     allContentfulImage {
       edges {
         node {
