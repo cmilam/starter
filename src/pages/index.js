@@ -1,10 +1,42 @@
 import React from "react"
+import {graphql} from 'gatsby'
+import Img from 'gatsby-image'
+import {
+  Box,
+  Container
+} from "@chakra-ui/react"
 
-
-export default function Home() {
+const Home = ({ data }) => {
   return(
-    <div>
-      <h1>AudioCORE homepage</h1>
-    </div>
+    <Box>
+      <Container>
+        <h1>AudioCORE homepage</h1>
+      </Container>
+      <Container>
+        <Img 
+        fluid={data.allContentfulImage.edges.node.image.fluid} 
+        alt={data.allContentfulImage.edges.node.image.title} 
+        />
+      </Container>
+    </Box>
   )
 }
+
+export default Home
+
+export const query = graphql `
+{
+    allContentfulImage {
+      edges {
+        node {
+          image {
+            fluid(maxWidth: 1280, maxHeight: 1280) {
+                ...GatsbyContentfulFluid
+            }
+            title
+          }
+        }
+      }
+    }
+  }
+`
