@@ -12,26 +12,24 @@ const Home = ({ data }) => {
       <Container>
         <h1>AudioCORE homepage</h1>
       </Container>
-      <Container>
         <Img 
-        fluid={data.allContentfulImage.edges.node.image.fluid} 
-        alt={data.allContentfulImage.edges.node.image.title} 
+        fluid={data.allContentfulImage.edges[0].node.image.fluid} 
+        alt={data.allContentfulImage.edges[0].node.image.title} 
         />
-      </Container>
     </Box>
   )
 }
 
 export default Home
 
-export const query = graphql `
-query MyQuery {
+export const query = graphql`
+  {
     allContentfulImage {
       edges {
         node {
           image {
-            fluid(maxWidth: 1280, maxHeight: 1280) {
-                ...GatsbyContentfulFluid
+            fluid {
+              ...GatsbyContentfulFluid
             }
             title
           }
