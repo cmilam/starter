@@ -1,4 +1,4 @@
-// src/pages/index.js
+// src/pages/index-bg.js
 import React from "react"
 import { Box, Text, Button, Heading, Flex, Square } from "@chakra-ui/react"
 import { graphql } from 'gatsby'
@@ -33,7 +33,7 @@ const indexBg = ( props ) => (
     <Box width="50%" bg="gray.50" className="left-angle"></Box>
     <Box width="50%" bg="gray.50" className="right-angle"></Box>
   </Flex>
-  <Square width="100px" height="100px" bg="gray.50" margin="0 auto">asdf</Square>
+  <Square width="100px" height="100px" bg="gray.50" margin="0 auto" className="icon-circle">asdf</Square>
   </Layout>
   )
 
@@ -41,7 +41,7 @@ export default indexBg;
 
 export const query = graphql`
 query {
-  indexImage: file(relativePath: { eq: "headphones-bg.jpg" }) {
+  indexImage: file(relativePath: { eq: "crowd-bg.jpg" }) {
     childImageSharp {
       fluid(quality: 100, maxWidth: 1920) {
         ...GatsbyImageSharpFluid

@@ -1,6 +1,6 @@
 .masthead {
     width: 100%;
-    height: 60vh;
+    height: 85vh;
     /* background-position: bottom center; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
@@ -11,9 +11,9 @@
 .black-overlay {
     /* display: -webkit-flex; Safari */
     /* display: flex; */
-    background-color: rgba(0, 0, 0, 0.90);
+    /* background-color: rgba(0, 0, 0, 0.90); */
     height: 100%;
-    padding:10vh 10%;
+    padding:10vh 10%; 
 }
 
 .left-angle, .right-angle {
@@ -27,4 +27,9 @@
 }
 .right-angle {
     transform: matrix(0.99999, -0.06993, 0, 1, 0, 0);
+}
+.icon-circle {
+    top: -139px;
+    position: relative;
+    z-index: 2;
 }
