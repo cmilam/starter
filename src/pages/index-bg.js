@@ -3,6 +3,7 @@ import React from "react"
 import { Box, Text, Button, Heading, Flex, Square } from "@chakra-ui/react"
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 
 import "../css/background-image.css"
 import Layout from "../components/layout"
@@ -18,6 +19,10 @@ const indexBg = ( props ) => (
   <Box className="black-overlay">
   <Heading as="h1" padding="4" color="gray.50" maxW="100%" bg="gray.900">Modern online and offline payments for Africa</Heading>
     <Box maxW="64rem">
+      <GatsbyImage
+        image={props.data.logo.childImageSharp.fluid}
+        alt="logo"
+        className="logo" />
     <Text color="gray.50">
         Paystack helps businesses in Africa get paid by anyone, anywhere in the
         world
@@ -33,7 +38,7 @@ const indexBg = ( props ) => (
     <Box width="50%" bg="gray.50" className="left-angle"></Box>
     <Box width="50%" bg="gray.50" className="right-angle"></Box>
   </Flex>
-  <Square width="100px" height="100px" bg="gray.50" margin="0 auto" className="icon-circle">asdf</Square>
+  <Square width="100px" height="100px" bg="gray.50" margin="0 auto" className="icon-circle" borderRadius="full">asdf</Square>
   </Layout>
   )
 
@@ -44,6 +49,13 @@ query {
   indexImage: file(relativePath: { eq: "crowd-bg.jpg" }) {
     childImageSharp {
       fluid(quality: 100, maxWidth: 1920) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  logo: file(relativePath: { eq: "nodeconfremote-2021-logo.png"}) {
+    childImageSharp {
+      fluid(quality: 100, maxWidth: 373) {
         ...GatsbyImageSharpFluid
       }
     }

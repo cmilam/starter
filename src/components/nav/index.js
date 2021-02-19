@@ -1,51 +1,31 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import styles from './style.css'
 import {Flex,
         Box,
         Button,
         Spacer,
         Heading} from "@chakra-ui/react"
-import {GatsbyImage} from 'gatsby-plugin-image'
 
+const Nav = () => {
+  return (
+    <Box bg="gray.900" paddingX="10%">
+    <Flex maxW="100%">
+        <Box p="2">
+            <Heading as="h2" color="gray.50">NodeConfRemote 2020</Heading>
+        </Box>
+        <Spacer />
+        <Box>
+            <Button mr="4" marginY="10px">
+                <Link to="/locations">Locations</Link>
+            </Button>
+            <Button>
+                <Link to="/contact">Contact</Link>
+            </Button>
+        </Box>
+    </Flex>
+    </Box>
+  )
+}
 
-
-export default function Nav() {
-    return (
-      <StaticQuery
-        query={graphql`{
-        indexImage: file(relativePath: { eq: "nodeconfremote-2021-logo.png" }) {
-              childImageSharp {
-                fluid(quality: 100, maxWidth: 373) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        `}
-        render={data => (
-            <Box bg="gray.900" paddingX="10%">
-            <Flex maxW="100%">
-                <Box p="2">
-                    <GatsbyImage 
-                        image={data.indexImage.childImageSharp.fluid} 
-                    />
-                </Box>
-                <Spacer />
-                <Box>
-                    <Button mr="4" marginY="10px">
-                        <Link to="/locations">Locations</Link>
-                    </Button>
-                    <Button>
-                        <Link to="/contact">Contact</Link>
-                    </Button>
-                </Box>
-            </Flex>
-            </Box>
-        )}
-      />
-    )
-  }
-  
-
-
+export default Nav
