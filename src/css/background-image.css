@@ -1,0 +1,30 @@
+.masthead {
+    width: 100%;
+    height: 60vh;
+    /* background-position: bottom center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* margin-bottom: 20px; */
+    /* padding:10vh 10%;} */
+}
+
+.black-overlay {
+    /* display: -webkit-flex; Safari */
+    /* display: flex; */
+    background-color: rgba(0, 0, 0, 0.90);
+    height: 100%;
+    padding:10vh 10%;
+}
+
+.left-angle, .right-angle {
+    height: 80px;
+    z-index: 1;
+    position: relative;
+    top: -41px;
+}
+.left-angle {
+    transform: matrix(0.99999, 0.06993, 0, 1, 0, 0);
+}
+.right-angle {
+    transform: matrix(0.99999, -0.06993, 0, 1, 0, 0);
+}
