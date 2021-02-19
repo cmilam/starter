@@ -3,24 +3,26 @@ import React from "react"
 import { Box, Text, Button, Heading, Flex, Square } from "@chakra-ui/react"
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import {GatsbyImage} from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import "../css/background-image.css"
 import Layout from "../components/layout"
 
-const indexBg = ( props ) => (
+function indexBg ({ data }) {
+  const logo = getImage(data.logo.childImageSharp.fluid)
+  return (
   <Layout>
   <BackgroundImage
     Tag="section"
     className="masthead"
-    fluid={props.data.indexImage.childImageSharp.fluid}
+    fluid={data.indexImage.childImageSharp.fluid}
     backgroundColor={`#040e18`}
   >
   <Box className="black-overlay">
   <Heading as="h1" padding="4" color="gray.50" maxW="100%" bg="gray.900">Modern online and offline payments for Africa</Heading>
     <Box maxW="64rem">
       <GatsbyImage
-        image={props.data.logo.childImageSharp.fluid}
+        image={logo}
         alt="logo"
         className="logo" />
     <Text color="gray.50">
@@ -41,8 +43,9 @@ const indexBg = ( props ) => (
   <Square width="100px" height="100px" bg="gray.50" margin="0 auto" className="icon-circle" borderRadius="full">asdf</Square>
   </Layout>
   )
+}
 
-export default indexBg;
+export default indexBg
 
 export const query = graphql`
 query {
@@ -53,7 +56,7 @@ query {
       }
     }
   }
-  logo: file(relativePath: { eq: "nodeconfremote-2021-logo.png"}) {
+  logo: file(relativePath: { eq: "nodeconfremote-2021-logo.png" }) {
     childImageSharp {
       fluid(quality: 100, maxWidth: 373) {
         ...GatsbyImageSharpFluid
