@@ -17,7 +17,7 @@
 }
 
 .left-angle, .right-angle {
-    height: 80px;
+    height: 120px;
     z-index: 1;
     position: relative;
     top: -41px;
@@ -29,7 +29,7 @@
     transform: matrix(0.99999, -0.06993, 0, 1, 0, 0);
 }
 .icon-circle {
-    top: -139px;
+    top: -170px;
     position: relative;
     z-index: 2;
 }

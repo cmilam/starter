@@ -9,7 +9,7 @@ import "../css/background-image.css"
 import Layout from "../components/layout"
 
 function indexBg ({ data }) {
-  const logo = getImage(data.logo.childImageSharp.fluid)
+  const logo = getImage(data.logo)
   return (
   <Layout>
   <BackgroundImage
